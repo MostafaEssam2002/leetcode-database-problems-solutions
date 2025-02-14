@@ -3,12 +3,12 @@
 ### Table: Logins
 
 ```plaintext
-+----------------+----------+
+
 | Column Name    | Type     |
-+----------------+----------+
+|----------------|----------|
 | user_id        | int      |
 | time_stamp     | datetime |
-+----------------+----------+
+
 ```
 
 - `(user_id, time_stamp)` is the primary key (combination of columns with unique values) for this table.
@@ -23,7 +23,7 @@ The result table can be returned in any order.
 #### Input:
 ```plaintext
 Logins table:
-+---------+---------------------+
+
 | user_id | time_stamp          |
 +---------+---------------------+
 | 6       | 2020-06-30 15:06:07 |
@@ -35,18 +35,15 @@ Logins table:
 | 2       | 2019-08-25 07:59:08 |
 | 14      | 2019-07-14 09:00:00 |
 | 14      | 2021-01-06 11:59:59 |
-+---------+---------------------+
 ```
 
 #### Output:
 ```plaintext
-+---------+---------------------+
 | user_id | last_stamp          |
 +---------+---------------------+
 | 6       | 2020-06-30 15:06:07 |
 | 8       | 2020-12-30 00:46:50 |
 | 2       | 2020-01-16 02:49:50 |
-+---------+---------------------+
 ```
 
 ### Explanation
