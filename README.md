@@ -1,2 +1,2 @@
-# leetcode-mysql-problems-solutions
+# leetcode-database-problems-solutions
  
