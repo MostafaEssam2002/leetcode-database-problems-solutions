@@ -28,18 +28,6 @@ The table holds all users. Each user has a unique **users_id**, and **role** is 
 ## Cancellation Rate Calculation
 The cancellation rate is computed by dividing the number of canceled (by client or driver) requests with unbanned users by the total number of requests with unbanned users on that day.  
 
-## SQL Query
-```sql
-SELECT 
-    trips.request_at AS `Day`,
-    ROUND(SUM(CASE WHEN trips.status IN ('cancelled_by_driver', 'cancelled_by_client') THEN 1 ELSE 0 END) / COUNT(*), 2) AS `Cancellation Rate`
-FROM trips
-JOIN users AS clients ON trips.client_id = clients.users_id AND clients.banned = 'No'
-JOIN users AS drivers ON trips.driver_id = drivers.users_id AND drivers.banned = 'No'
-WHERE trips.request_at BETWEEN '2013-10-01' AND '2013-10-03'
-GROUP BY trips.request_at;
-```
-
 ## Example
 ### Input
 #### Trips Table
@@ -79,3 +67,15 @@ GROUP BY trips.request_at;
 - **2013-10-01**: 3 unbanned requests, 1 canceled → `1 / 3 = 0.33`
 - **2013-10-02**: 2 unbanned requests, 0 canceled → `0 / 2 = 0.00`
 - **2013-10-03**: 2 unbanned requests, 1 canceled → `1 / 2 = 0.50`
+
+## SQL Query
+```sql
+SELECT 
+    trips.request_at AS `Day`,
+    ROUND(SUM(CASE WHEN trips.status IN ('cancelled_by_driver', 'cancelled_by_client') THEN 1 ELSE 0 END) / COUNT(*), 2) AS `Cancellation Rate`
+FROM trips
+JOIN users AS clients ON trips.client_id = clients.users_id AND clients.banned = 'No'
+JOIN users AS drivers ON trips.driver_id = drivers.users_id AND drivers.banned = 'No'
+WHERE trips.request_at BETWEEN '2013-10-01' AND '2013-10-03'
+GROUP BY trips.request_at;
+```
