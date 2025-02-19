@@ -31,7 +31,7 @@ Fork the repo, make changes, and submit a pull request! 🚀
 ## 🔗 Connect
 
 Follow for more SQL problem-solving insights!  
-📌 **Repository Owner:** [MostafaEssam2002]([https://github.com/Moessam2002](https://github.com/MostafaEssam2002))
+📌 **Repository Owner:** [MostafaEssam2002](https://github.com/MostafaEssam2002)
 
 ---
 
