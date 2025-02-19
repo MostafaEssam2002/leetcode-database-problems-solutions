@@ -14,7 +14,8 @@ Each problem is stored in a Markdown (`.md`) file with a detailed explanation an
 
 ## 📌 About
 
-- 🔹 This repository is public and open for contributions.
+- 🔹 This repository contains solutions for **all 82 free LeetCode database problems**.
+- 🔹 It is public and open for contributions.
 - 🔹 Provides SQL-based solutions with explanations.
 - 🔹 Ideal for those practicing SQL for interviews or competitive programming.
 
