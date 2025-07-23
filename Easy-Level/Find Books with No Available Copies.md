@@ -1,4 +1,4 @@
-# 📚 SQL Query: Find Fully Borrowed Books in a Library
+# Find Fully Borrowed Books in a Library
 
 ## 🧾 Table: `library_books`
 
