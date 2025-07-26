@@ -1,4 +1,4 @@
-# SQL Problem: User Activity Analysis
+# SQL Problem: Analyze Subscription Conversion 
 
 ## Problem Description
 
